@@ -25,27 +25,19 @@ console.log(`The max pay for ${job} is $120,000 and minis  $40,000. The range is
 
 // 4: Write a function that satifies the following interaction pattern:
 
-function checkStockFridge(item) {
-    console.log(`${item} is running low`);
-  }
+function checkStock(itemQuantity, item){
+    if (itemQuantity === 0) {
+    console.log(`${item} -OUT of stock`);
+  } else if (itemQuantity < 4) {
+    console.log (`${item} - is running LOW`);
+  } else {
+      console.log(`${item} is stocked`);
+  }}
   
-  checkStockFridge("Tortillas");
-  // --> "Howdy, Kaitlyn!"
-  
-  checkStockFridge("Salsa");
-  // --> "Howdy, Brian!"
-  function checkStockPantry(item) {
-    console.log(`${item} is stocked`)
-  }
-  checkStockPantry("Coffee");
-  
-  function checkStockCooler(item) {
-    console.log(`${item} is OUT of stock!`)
-  }
-  checkStockCooler("Cheese");
-
-
-checkStock(4, "Coffee");
+  checkStock(4, "Coffee");
+  checkStock(3, "Tortillas");
+  checkStock(0, "Cheese");
+  checkStock(1, "Salsa");
 // => "Coffee is stocked"
 
 checkStock(3, "Tortillas");
