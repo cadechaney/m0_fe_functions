@@ -17,8 +17,8 @@ nameQuestion();
 
 // EX 2:
 function addThreeNums(first, second, third) {
-var sum = first + second + third;
-console.log(sum);
+  var sum = first + second + third;
+  console.log(sum);
 }
 
 addThreeNums(1, 2, 3);
@@ -42,7 +42,8 @@ function average(num1, num2) {
   var sum = num1 + num2;
   var avg = sum / 2;
 
-  console.log(`the average is: ${avg}`)
+  console.log(`the average is: ${avg}`);
 }
+average();
   // Had to fix first curly bracket to be next on line 41 next to the function. I indented the var sums correctly. 
   // Finally I had to fix position of last curly bracket to be in line with the function.
